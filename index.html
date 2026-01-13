@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Portfólio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="css_js/bootstrap/css/bootstrap.min.css">
+     <script src="css_js/bootstrap/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <aside class="menu">
+        <nav>
+            <img src="img/menu.png" alt="Menu" class="menu-icon" onclick="clickMenu()">
+            <ul>
+                <li><img src="img/home.png" alt="Início" class="item"><a href="index.html">Início</a></li>
+                <li><img src="img/sobre.png" alt="Sobre Mim" class="item"><a href="sobre.html">Sobre Mim</a></li>
+                <li><img src="img/projetos.png" alt="Projetos" class="item"><a href="projetos.html">Projetos</a></li>
+                <li><img src="img/contato.png" alt="Contato" class="item"><a href="contato.html">Contato</a></li>
+            </ul>
+        </nav>
+    </aside>
+</body>
+<script>
+    const menu = document.querySelector(".menu");
+
+    function clickMenu() {
+        if (menu.classList.contains("active")) {
+            menu.classList.remove("active");
+        } else {
+            menu.classList.add("active");
+    }
+}
+</script>
+</html>
