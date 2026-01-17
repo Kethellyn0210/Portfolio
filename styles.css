@@ -18,10 +18,21 @@ body {
   flex-direction: column;
   justify-content: space-between;
   padding: 30px 20px;
+  transition: width 0.3s ease;
+  border-radius: 3px;
 }
 
 .menu.active {
-  width: 80px;
+  width: 90px;
+}
+
+.menu a {
+  transition: opacity 0.3s;
+}
+
+.menu.active a {
+  opacity: 0;
+  pointer-events: none;
 }
 
 .menu-icon {
@@ -47,9 +58,11 @@ body {
 nav ul li {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 5px;
   padding: 15px 10px;
   cursor: pointer;
+  margin-bottom: 10px;
+  margin-top: 10px;
 }
 
 nav ul li.active,
@@ -58,6 +71,7 @@ nav ul li:hover {
   border-radius: 8px;
   opacity: 1;
 }
+
 a {
   text-decoration: none;
   color: white;
@@ -69,4 +83,38 @@ a:visited {
 
 a:hover {
   color: #b497cc;
+}
+
+.content {
+  flex: 1;
+  background: #fff;
+  padding: 20px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.foto {
+  background: #f6ecfb;
+  padding: 10px;
+  border-radius: 10px;
+  text-align: center;
+  width: 300px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.home {
+  align-items: center;
+  text-align: center;
+}
+
+h1 {
+  margin: 20px 0;
+  font-size: 30px;
+  color: #e2bdff;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 100%;
+  animation: mover 8s linear infinite;
+  text-shadow: 0 0 10px #e2bdff;
 }
